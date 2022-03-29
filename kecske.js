@@ -9,6 +9,8 @@ function QS(elem) {
     return document. querySelectorAll(elem);
 }
 
+var kepIndex = 0;
+
 function init() {
     var nevek = "Berényi Péter, Kovács Milán";
     QS("footer p")[0].innerHTML = nevek;
@@ -27,6 +29,7 @@ function init() {
 }
 
 var kepek = [];
+var alt = [];
 
 function kepKattint() {
     /*for (let index = 0; index < kepek.length; index++) {
@@ -36,19 +39,38 @@ function kepKattint() {
         }
         
     }*/
+
     kepek.push(this.src);
-    console.log(kepek);
+    alt.push(this.alt)
+    //console.log(kepek);
+    event.target.removeEventListener("click", kepKattint)
+    
     
 }
 
+var csonak = [];
+
 function kepetAtrak() {
+    
     this.style.display = "none";
-    ID("csonak").innerHTML = `<img src="${this.src}" alt="">`;
+    ID("csonak").innerHTML = `<img src="${this.src}" alt="${this.alt}" id="${this.alt}">`;
+    csonak.push(this.alt);
+    console.log()
+    veszelyes(this.alt)
+    
+
+}
+var csonak = "";
+function veszelyes(id) {
+    if (ID(id).alt === "kaposzta")  {
+        console.log("ez egy káposzta")
+    }
+    
+    var csonak = id.alt;
+
+    console.log(ID(id).id)
 }
 
-/*function veszelyes() {
-    if ()
-}*/
 
 
 
