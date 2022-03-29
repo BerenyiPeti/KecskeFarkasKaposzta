@@ -4,16 +4,36 @@ function ID(elem) {
     return document.getElementById(elem);
 }
 
-function QS(elem) {
-    doucument. querySelectorAll(elem)[index]
 
+function QS(elem) {
+    return document. querySelectorAll(elem);
 }
 
 function init() {
     var nevek = "Berényi Péter, Kovács Milán";
-    ID("keszitok").innerHTML = nevek;
-    ID("keszitok").style.fontSize = "20px";
-    ID("keszitok").style.textAlign = "center";
+    QS("footer p")[0].innerHTML = nevek;
+    QS("footer p")[0].style.fontSize = "20px";
+    QS("footer p")[0].style.textAlign = "center";
+
+    for (let index = 0; index < 3; index++) {
+        QS("#bal img")[index].addEventListener("click", kepKattint);
+        
+    }
+}
+
+var kepek = [];
+
+function kepKattint() {
+    /*for (let index = 0; index < kepek.length; index++) {
+        if (!kepek[index] === `${this.src}`) {
+            kepek.push(this.src);
+
+        }
+        
+    }*/
+    kepek.push(this.src);
+    console.log(kepek);
+    
 }
 
 
