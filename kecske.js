@@ -23,9 +23,18 @@ function init() {
         QS("#bal img")[index].addEventListener("click", kepetAtrak);
         
     }
+
 }
 
-var kepek = [];
+var kepek = [
+{
+    elreresiUt : "",
+    alt: "",
+},
+{
+
+}
+];
 
 function kepKattint() {
     /*for (let index = 0; index < kepek.length; index++) {
@@ -45,6 +54,9 @@ function kepetAtrak() {
     ID("csonak").innerHTML = `<img src="${this.src}" alt="">`;
 }
 
+function veszelyes() {
+    if ()
+}
 
 
 
