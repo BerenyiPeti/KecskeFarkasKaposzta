@@ -26,15 +26,7 @@ function init() {
 
 }
 
-var kepek = [
-{
-    elreresiUt : "",
-    alt: "",
-},
-{
-
-}
-];
+var kepek = [];
 
 function kepKattint() {
     /*for (let index = 0; index < kepek.length; index++) {
@@ -54,9 +46,9 @@ function kepetAtrak() {
     ID("csonak").innerHTML = `<img src="${this.src}" alt="">`;
 }
 
-function veszelyes() {
+/*function veszelyes() {
     if ()
-}
+}*/
 
 
 

@@ -5,11 +5,13 @@
 }
 
 main {
-    display: grid;
+    display: grid; 
     grid-template-areas:'h h h h'
-                        'as a a as'
+                        'bl a a jb'
                         'f f f f';
+
     gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 10px;
     text-align: center;
 }
@@ -20,20 +22,17 @@ main , header, article, aside, footer{
 }
 
 #bal {
-    grid-area: as;
-    display: grid;
+    grid-area: bl;
     
 }
 
 #jobb {
-    grid-area: as;
-    display: grid;
+    grid-area: jb;
     
 }
 
 article {
     grid-area: a;
-    display: grid;
     
 }
 
