@@ -19,6 +19,10 @@ function init() {
         QS("#bal img")[index].addEventListener("click", kepKattint);
         
     }
+    for (let index = 0; index < 3; index++) {
+        QS("#bal img")[index].addEventListener("click", kepetAtrak);
+        
+    }
 }
 
 var kepek = [];
@@ -35,6 +39,13 @@ function kepKattint() {
     console.log(kepek);
     
 }
+
+function kepetAtrak() {
+    this.style.display = "none";
+    ID("csonak").innerHTML = `<img src="${this.src}" alt="">`;
+}
+
+
 
 
 
